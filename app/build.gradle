@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.foodfactory"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    /*
+    --------------------Dependencies for UI Design-----------------------
+     */
+    // slider image dependency
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    //recyceler view
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    //cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    //Field and method binding for Android views which uses annotation processing
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    //Lottie
+    implementation 'com.airbnb.android:lottie:3.0.7'
+
+    //material design
+    implementation 'com.google.android.material:material:1.0.0'
+
+    //Circle image View
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    //CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    /*
+    ------------------------Dependencies for cashing and load data-----------------
+     */
+
+    //Glid
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+}

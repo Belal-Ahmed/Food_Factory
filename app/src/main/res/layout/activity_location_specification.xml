@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="5"
+    android:background="@color/white"
+    tools:context=".activity.LocationSpecification">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/access_location_lv"
+            app:lottie_rawRes="@raw/access_location"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/location_warning"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/use_current_location_bt"
+            android:background="@drawable/round_border_fill_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_current_location"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/use_anther_location_bt"
+            android:background="@drawable/round_fill_color_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_another_location"
+            android:textColor="@color/gray"
+            android:textAllCaps="false"
+            android:textStyle="normal"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

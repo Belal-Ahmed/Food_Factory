@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- App Main Color-->
+    <color name="orange">#FF4500</color>
+    <color name="light_orange">#FF581A</color>
+    <color name="dark_orange">#b33000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_whit">#E9EBEE</color>
+    <color name="gray">#707070</color>
+    <color name="sliver">#727C8E</color>
+    <color name="green">#0B880B</color>
+    <color name="transparent">#00000000</color>
+
+
+</resources>

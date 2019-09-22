@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Food Factory</string>
+
+    <!-- Splash screen String -->
+    <string name="splash_app_name">Food Factory</string>
+
+    <!--Location access activity string-->
+    <string name="location_warning">food factory uses your location to show the \n restorents near you</string>
+    <string name="use_current_location"> USE CURRENT LOCATION</string>
+    <string name="use_another_location"> Use another location</string>
+
+    <!--Home activity String-->
+    <string name="now">Now</string>
+    <string name="current_location">104  St James Boulevard</string>
+    <string name="search_restaurant">Search Restaurant</string>
+    <string name="favorite">100</string>
+    <string name="rating">4.5</string>
+    <string name="open_close_time">7.00 AM - 11.00 PM</string>
+
+    <!--Bottom Navigation View String-->
+    <string name="home">Home</string>
+    <string name="near_by_restaurant">Near by restaurant</string>
+    <string name="search_history">Search History</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+
+    <!-- Home fragment String -->
+    <string name="hello_home_fragment">Hello Home fragment</string>
+
+    <string name="restaurant_near_you">50 restaurants near you</string>
+    <string name="restaurant_name">The Yuu Cafe</string>
+    <string name="restaurant_main_item">Chicken Wings | Pizza | BBQ</string>
+    <string name="restaurant_menu">Menu</string>
+
+    <string-array name="restaurant_list">
+        <item>The Yuu Cafe </item>
+        <item>Amrutha Lounge</item>
+        <item>Blighty Finsbury Park</item>
+        <item>The Yuu Cafe </item>
+        <item>The Yuu Cafe </item>
+        <item>The Yuu Cafe </item>
+        <item>The Yuu Cafe </item>
+    </string-array>
+
+    <!-- Nearby restaurant fragment String -->
+    <string name="hello_nearby_restaurant_fragment">Hello Nearby restaurant fragment</string>
+
+    <!-- Search History fragment String -->
+    <string name="hello_search_history_fragment">Hello Search History fragment</string>
+
+    <string name="order_completed">Order Completed</string>
+    <string name="order_completed_time">19 Sep 2019, 12.12 pm</string>
+    <string name="order_id">Order #72BD0</string>
+    <string name="rate_order">Rate Order</string>
+    <string name="order_completed_list">Chicken Wings\nBBQ</string>
+    <string name="order_completed_total">Total: $10</string>
+    <string name="re_order">Reorder</string>
+    <string-array name="previous_order_list">
+        <item>Chicken Wings</item>
+        <item>BBQ</item>
+    </string-array>
+
+
+    <!-- Cart fragment String -->
+    <string name="hello_cart_fragment">Hello Cart fragment</string>
+
+    <!-- Profile fragment String -->
+    <string name="hello_profile_fragment">Hello Profile fragment</string>
+
+    <string name="username">Arif Rahman</string>
+    <string name="email">arif@storerepublic.com</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="all_my_orders">All My Orders</string>
+    <string name="wish_list">Wish List</string>
+    <string name="pending_payments">Pending Payments</string>
+    <string name="finished_orders">Finished Orders</string>
+    <string name="account_information">Account Information</string>
+    <string name="my_address">My Address</string>
+    <string name="faqs">FAQs</string>
+    <string name="about_us">About Us</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
