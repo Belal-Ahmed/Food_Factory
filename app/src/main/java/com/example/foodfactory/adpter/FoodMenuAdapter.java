@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -50,6 +51,11 @@ public class FoodMenuAdapter extends RecyclerView.Adapter<FoodMenuAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+        //set Animation
+        holder.menuImageId.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_transition_animation));
+        holder.menuTitleId.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_scale_animation));
+        holder.menuPizeId.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_scale_animation));
+        holder.menuAddBtn.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.fade_scale_animation));
         final String name = foodArrayList.get(position);
         holder.menuTitleId.setText(name);
 

@@ -44,25 +44,8 @@ public class ResturentFragment extends Fragment {
         context = getActivity();
 
         // set adapter
-        //setAdapter(context);
-        title.clear();
-        for (int i = 0; i < 15; i++) {
-            title.add("Spicy Berger" + i);
-        }
-        foodMenuRecyView.setHasFixedSize(true);
-        foodMenuRecyView.setLayoutManager(new LinearLayoutManager(context));
-        //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+        setAdapter(context);
 
-        foodMenuAdapter = new FoodMenuAdapter(context, title);
-        foodMenuRecyView.setAdapter(foodMenuAdapter);
-       // foodMenuRecyView.notifyAll();
-        // set listener
-        foodMenuAdapter.setAdapterListener(new FoodMenuListener() {
-            @Override
-            public void didPressed(int position) {
-                Toast.makeText(getActivity(), "" + position, Toast.LENGTH_SHORT).show();
-            }
-        });
         return view;
 
     }
@@ -73,12 +56,11 @@ public class ResturentFragment extends Fragment {
             title.add("Spicy Berger" + i);
         }
         foodMenuRecyView.setHasFixedSize(true);
-        foodMenuRecyView.setLayoutManager(new LinearLayoutManager(ctx));
-        //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
-
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+        foodMenuRecyView.setLayoutManager(linearLayoutManager);
         foodMenuAdapter = new FoodMenuAdapter(ctx, title);
         foodMenuRecyView.setAdapter(foodMenuAdapter);
-        foodMenuRecyView.notifyAll();
+       // foodMenuRecyView.notifyAll();
         // set listener
         foodMenuAdapter.setAdapterListener(new FoodMenuListener() {
             @Override

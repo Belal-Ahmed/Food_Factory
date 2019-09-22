@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -48,6 +49,11 @@ public class NearByRestaurantAdapter extends RecyclerView.Adapter<NearByRestaura
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: in onBindViewHolder");
+
+        //set Animation
+        holder.restaurantMainItemTv.setAnimation(AnimationUtils.loadAnimation(nearBycontext, R.anim.fade_transition_animation));
+        holder.restaurantInfoLo01.setAnimation(AnimationUtils.loadAnimation(nearBycontext, R.anim.fade_scale_animation));
+
         holder.restaurantNameTv.setText(restaurant_list[position]);
 
         holder.restaurantMenuBtn.setOnClickListener(new View.OnClickListener() {

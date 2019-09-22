@@ -5,8 +5,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,6 +39,10 @@ public class PreviousOrderAdapter extends RecyclerView.Adapter<PreviousOrderAdap
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: in onBindViewHolder");
+        //set Animation
+        holder.orderList.setAnimation(AnimationUtils.loadAnimation(preContext, R.anim.fade_transition_animation));
+        holder.contain.setAnimation(AnimationUtils.loadAnimation(preContext, R.anim.fade_scale_animation));
+
         holder.orderList.setText(previousOrderList[position]);
     }
 
@@ -50,6 +56,7 @@ public class PreviousOrderAdapter extends RecyclerView.Adapter<PreviousOrderAdap
         TextView orderComplete,orderCompleteTime, orderCompleteId, orderList, total;
         ImageView previousOrderItemImage;
         Button previousOrderRate, previousOrderReorder;
+        LinearLayout contain;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +68,7 @@ public class PreviousOrderAdapter extends RecyclerView.Adapter<PreviousOrderAdap
             orderCompleteId = itemView.findViewById(R.id.order_id_tv);
             orderList = itemView.findViewById(R.id.previous_order_item_tv);
             total = itemView.findViewById(R.id.reorder_total_tv);
+            contain = itemView.findViewById(R.id.container);
 
             previousOrderItemImage = itemView.findViewById(R.id.previous_order_item_iv);
             previousOrderRate = itemView.findViewById(R.id.previous_order_rate_btn);
