@@ -39,8 +39,8 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
     TextView reviewTxt;
     @BindView(R.id.menuHomeFragment)
     FrameLayout menuHomeFragment;
-    @BindView(R.id.floatingActionButton)
-    Button floatingActionButton;
+    @BindView(R.id.cartitem)
+    ImageView cartItem;
     @BindView(R.id.backArrow)
     ImageView backArrow;
     private ResturentFragment mResturentFragment;
@@ -74,12 +74,18 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
+        int color = getResources().getColor(R.color.light_whit);
+        int color1 = getResources().getColor(R.color.white);
         if (view.getId() == R.id.menuItemTxt) {
             replaceFragment(mResturentFragment);
+            menuItemTxt.setBackgroundColor(color1);
+            reviewTxt.setBackgroundColor(color);
             //return;
         }
         if (view.getId() == R.id.reviewTxt) {
             replaceFragment(mResturentReviewFragment);
+            reviewTxt.setBackgroundColor(color1);
+            menuItemTxt.setBackgroundColor(color);
             //return;
         }if (view.getId() == R.id.backArrow) {
             this.finish();

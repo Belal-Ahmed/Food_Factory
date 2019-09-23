@@ -28,19 +28,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:pager_animation="Default"
-                app:pager_animation_span="1100">
+                app:pager_animation_span="1100"/>
 
                 <ImageView
                     android:id="@+id/backArrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="4dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="8dp"
                     android:src="@drawable/ic_arrow_back_white_24dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-            </com.daimajia.slider.library.SliderLayout>
+            <ImageView
+                android:id="@+id/cartitem"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_cart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
 
             <TextView
                 android:id="@+id/resturentName"
@@ -88,36 +98,47 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".5"
-        android:elevation="5dp"
-        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingTop="5dp">
+        android:layout_weight=".65">
 
-        <TextView
-            android:id="@+id/menuItemTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:paddingLeft="20dp"
-            android:text="Menu Item"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/reviewTxt"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingEnd="20dp"
-            android:text="Reviews"
-            android:textAlignment="viewEnd"
-            android:textSize="22sp" />
+            android:weightSum="2"
+            android:elevation="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/menuItemTxt"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:background="@color/white"
+                android:text="Menu Item"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/reviewTxt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:background="@color/light_whit"
+                android:layout_height="match_parent"
+                android:paddingEnd="20dp"
+                android:text="Reviews"
+                android:textAlignment="viewEnd"
+                android:textSize="22sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7"
-        android:padding="5dp">
+        android:layout_weight="6.85">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -135,7 +156,7 @@
 
             </FrameLayout>
 
-            <Button
+            <!--<Button
                 android:id="@+id/floatingActionButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -153,7 +174,9 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:ignore="PrivateResource" />
+                tools:ignore="PrivateResource" />-->
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

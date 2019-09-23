@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="7dp"
+    android:layout_marginEnd="7dp"
+    android:layout_marginBottom="5dp"
     android:background="@color/light_whit"
+    app:cardCornerRadius="5dp"
+    android:elevation="5dp"
     app:cardElevation="3dp">
 
     <LinearLayout
@@ -32,7 +37,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2.65"
+            android:layout_weight="2.5"
             android:orientation="vertical">
 
             <LinearLayout
@@ -53,8 +58,8 @@
                         android:gravity="center_vertical"
                         android:paddingStart="7dp"
                         android:paddingEnd="7dp"
-                        android:text="Beef Piza"
-                        android:textSize="20sp" />
+                        android:text="Sweets heaven"
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -69,7 +74,7 @@
                         android:paddingStart="7dp"
                         android:paddingEnd="7dp"
                         android:text="$ 10"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
 
                     <ImageView
                         android:id="@+id/menuWishlistId"
@@ -91,7 +96,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".85"
+            android:layout_weight="1"
             android:orientation="horizontal"
             android:padding="5dp">
 
@@ -110,15 +115,16 @@
                     <TextView
                         android:id="@+id/menuMinusIcon"
                         android:layout_width="wrap_content"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_minus"
-                        android:padding="5dp" />
+                         />
 
                     <TextView
                         android:id="@+id/menuValueId"
                         android:layout_width="wrap_content"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:text="1"
+                        android:layout_margin="4dp"
                         android:textAlignment="center"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -126,9 +132,9 @@
                     <TextView
                         android:id="@+id/menuPlusIcon"
                         android:layout_width="wrap_content"
-                        android:layout_height="20dp"
-                        android:drawableEnd="@drawable/ic_plus"
-                        android:padding="5dp" />
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_add"
+                       />
 
                 </LinearLayout>
 
@@ -138,9 +144,10 @@
                     android:layout_height="0dp"
                     android:layout_gravity="center"
                     android:layout_weight=".85"
-                    android:background="@drawable/shape_button_back"
+                    android:background="@drawable/round_border_fill_transparent_bg"
                     android:padding="1dp"
                     android:text="ADD"
+                    android:textColor="@color/gray"
                     android:textAlignment="gravity"
                     android:textSize="15sp" />
 

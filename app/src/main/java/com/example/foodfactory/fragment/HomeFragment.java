@@ -18,8 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.foodfactory.R;
 import com.example.foodfactory.adpter.NearByRestaurantAdapter;
 
-import java.util.Objects;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -34,12 +32,12 @@ public class HomeFragment extends Fragment {
     Toolbar homeToolbar;
     @BindView(R.id.search_la)
     LinearLayout searchLa;
-    @BindView(R.id.all_restaurant_rv)
-    RecyclerView allRestaurantRv;
     @BindView(R.id.homeLocation)
     TextView homeLocation;
     @BindView(R.id.homeSearch)
     EditText homeSearch;
+    @BindView(R.id.all_restaurant_rv)
+    RecyclerView allRestaurantRv;
     private String[] allrestaurantName_list;
 
 
@@ -53,9 +51,9 @@ public class HomeFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        ButterKnife.bind(this,view);
-        allrestaurantName_list =getResources().getStringArray(R.array.restaurant_list);
-        Log.d(TAG, "onCreateView: "+allRestaurantRv);
+        ButterKnife.bind(this, view);
+        allrestaurantName_list = getResources().getStringArray(R.array.restaurant_list);
+        Log.d(TAG, "onCreateView: " + allRestaurantRv);
         allRestaurantRv.setHasFixedSize(true);
         allRestaurantRv.setLayoutManager(new LinearLayoutManager(getActivity()));
 
